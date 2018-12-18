@@ -1,6 +1,7 @@
-package kalman
+package kalman_test
 
 import (
+	"github.com/mtlotfizad/kalman"
 	"gonum.org/v1/plot"
 	"gonum.org/v1/plot/plotter"
 	"gonum.org/v1/plot/plotutil"
@@ -25,7 +26,7 @@ func TestKalmanGps_Process(t *testing.T) {
 
 	x, dx := 0.0, 0.01
 	n := 10000
-	klm := New(3)
+	klm := kalman.New(3.0)
 
 	klm.InitState(x, math.Sin(x), 1.0, 1)
 
@@ -34,15 +35,15 @@ func TestKalmanGps_Process(t *testing.T) {
 	xaryFiltered := make([]float64, 0, n)
 	yaryFiltered := make([]float64, 0, n)
 
-	for i := 0; i < n; i++ {
+	for i := 1; i < n; i++ {
 		y := math.Sin(x) + 0.1*(rand.NormFloat64()-0.5)
 		x += dx
 		xary = append(xary, x)
 		yary = append(yary, y)
 
 		klm.Process(x, y, 1.0, uint(i))
-		xaryFiltered = append(xaryFiltered, klm.latitude)
-		yaryFiltered = append(yaryFiltered, klm.longitude)
+		xaryFiltered = append(xaryFiltered, klm.GetLatitude())
+		yaryFiltered = append(yaryFiltered, klm.GetLongitude())
 	}
 
 	p, err := plot.New()
@@ -51,8 +52,8 @@ func TestKalmanGps_Process(t *testing.T) {
 	}
 
 	err = plotutil.AddLinePoints(p,
-		"Original", generatePoints(xary, yary),
-		"Filtered", generatePoints(xaryFiltered, yaryFiltered),
+		"Original", generatePoints2(xary, yary),
+		"Filtered", generatePoints2(xaryFiltered, yaryFiltered),
 	)
 	if err != nil {
 		panic(err)

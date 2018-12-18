@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc288cda-7ddb-41c2-9099-1627922fa226" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kalman-ryskiwt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kalman-gps.go" beforeDir="false" afterPath="$PROJECT_DIR$/kalman-gps.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kalman-test.go" beforeDir="false" afterPath="$PROJECT_DIR$/kalman_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kalman_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/kalman_test.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kalman_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
-              <folding>
-                <element signature="e#14#223#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-38">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
@@ -30,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kalman-gps.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="280">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -46,7 +43,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/go/src/github.com/ryskiwt/go-kalman/main.go">
+        <entry file="file://$PROJECT_DIR$/../../ryskiwt/go-kalman/main.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
               <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
@@ -70,16 +67,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/go/src/github.com/ryskiwt/go-kalman/filter.go" />
-        <option value="$USER_HOME$/go/src/github.com/ryskiwt/go-kalman/main.go" />
+        <option value="$PROJECT_DIR$/../../ryskiwt/go-kalman/filter.go" />
+        <option value="$PROJECT_DIR$/../../ryskiwt/go-kalman/main.go" />
         <option value="$PROJECT_DIR$/kalman-test.go" />
-        <option value="$PROJECT_DIR$/kalman-gps.go" />
         <option value="$PROJECT_DIR$/kalman-ryskiwt.go" />
         <option value="$PROJECT_DIR$/kalman_test.go" />
+        <option value="$PROJECT_DIR$/kalman-gps.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1855" />
@@ -98,11 +95,6 @@
               <item name="kalman" type="b2602c69:ProjectViewProjectNode" />
               <item name="kalman" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="kalman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kalman" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -116,16 +108,16 @@
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545137384222" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545142239707" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -195,7 +187,8 @@
       <updated>1545035559095</updated>
       <workItem from="1545035577907" duration="826000" />
       <workItem from="1545036875620" duration="127000" />
-      <workItem from="1545037020752" duration="20335000" />
+      <workItem from="1545037020752" duration="21550000" />
+      <workItem from="1545138783497" duration="3318000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1545125818750</created>
@@ -207,8 +200,40 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 19m 38s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 21m 29s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 21m 40s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 24m 43s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 25m 03s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 25m 47s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 37m 03s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 37m 11s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 38m 44s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 39m 57s.xml">
+      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21288000" />
+    <option name="totallyTimeSpent" value="25821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -220,10 +245,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20531267" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20752628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -233,7 +258,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" weight="0.32829374" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3423326" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297414" />
@@ -242,6 +267,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -259,6 +285,17 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/src/github.com/ajstarks/svgo" />
+      <path value="$PROJECT_DIR$/src/github.com/golang/freetype" />
+      <path value="$PROJECT_DIR$/src/github.com/jung-kurt/gofpdf" />
+      <path value="$PROJECT_DIR$/src/github.com/llgcode/draw2d" />
+      <path value="$PROJECT_DIR$/src/golang.org/x/exp" />
+      <path value="$PROJECT_DIR$/src/golang.org/x/image" />
+      <path value="$PROJECT_DIR$/src/gonum.org/v1/gonum" />
+      <path value="$PROJECT_DIR$/src/gonum.org/v1/plot" />
+      <path value="$PROJECT_DIR$/src/rsc.io/pdf" />
+    </ignored-roots>
     <MESSAGE value="change" />
     <option name="LAST_COMMIT_MESSAGE" value="change" />
   </component>
@@ -270,34 +307,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/go/src/github.com/gonum/matrix/mat64/matrix.go">
+    <entry file="file://$PROJECT_DIR$/../../gonum/matrix/mat64/matrix.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="229" column="12" selection-start-line="229" selection-start-column="9" selection-end-line="229" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/go/src/gonum.org/v1/plot/plotter/plotter.go">
+    <entry file="file://$PROJECT_DIR$/sample.png" />
+    <entry file="file://$PROJECT_DIR$/../../../gonum.org/v1/plot/plotter/plotter.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/go/src/github.com/ryskiwt/go-kalman/filter.go">
+    <entry file="file://$PROJECT_DIR$/../../ryskiwt/go-kalman/filter.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/go/src/github.com/ryskiwt/go-kalman/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -315,20 +343,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../ryskiwt/go-kalman/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../gonum.org/v1/plot/plot.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/go-1.10/src/testing/testing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="727" selection-start-line="727" selection-end-line="727" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/go-1.10/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="587" selection-start-line="587" selection-end-line="587" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kalman-gps.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="280">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kalman_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
-          <folding>
-            <element signature="e#14#223#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-38">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
