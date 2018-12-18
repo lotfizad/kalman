@@ -23,14 +23,13 @@ func main() {
 	ostd := 0.1
 
 	// trend model
-	config := kalman.Config{
+	filter, err := kalman.New(&kalman.Config{
 		F: mat64.NewDense(2, 2, []float64{2, -1, 1, 0}),
 		G: mat64.NewDense(2, 1, []float64{1, 0}),
 		Q: mat64.NewDense(1, 1, []float64{sstd}),
 		H: mat64.NewDense(1, 2, []float64{1, 0}),
 		R: mat64.NewDense(1, 1, []float64{ostd}),
-	}
-	filter, err := kalman.New(&config)
+	})
 	if err != nil {
 		panic(err)
 	}

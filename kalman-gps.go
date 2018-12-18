@@ -2,26 +2,29 @@ package kalman
 
 const minAccuracy = 1
 
-type KalmanGps struct {
-	metresPerSecond float64
-	timeMilliSecond uint
-	latitude        float64
-	longitude       float64
-
+type kalmanGps struct {
+	timeMilliSecond            uint
+	latitude                   float64
+	longitude                  float64
 	variance                   float64
 	averageSpeedMeterPerSecond uint
 }
 
-func (kalmanGps *KalmanGps) Init(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeMillisecond uint,
-	averageSpeedMeterPerSecond uint) {
-	kalmanGps.timeMilliSecond = timeMillisecond
-	kalmanGps.latitude = latitudeMeasured
-	kalmanGps.longitude = longitudeMeasured
-	kalmanGps.variance = accuracyMeasured * accuracyMeasured
-	kalmanGps.averageSpeedMeterPerSecond = averageSpeedMeterPerSecond
+func New(averageSpeedMeterPerSecond uint) *kalmanGps {
+	kGps := kalmanGps{}
+	kGps.averageSpeedMeterPerSecond = averageSpeedMeterPerSecond
+	kGps.variance = -1
+	return &kGps
 }
 
-func (kalmanGps *KalmanGps) Process(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeMillisecond uint) {
+func (gps kalmanGps) InitState(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeMillisecond uint) {
+	gps.timeMilliSecond = timeMillisecond
+	gps.latitude = latitudeMeasured
+	gps.longitude = longitudeMeasured
+	gps.variance = accuracyMeasured * accuracyMeasured
+}
+
+func (kalmanGps *kalmanGps) Process(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeMillisecond uint) {
 	if accuracyMeasured < minAccuracy {
 		accuracyMeasured = minAccuracy
 	}
