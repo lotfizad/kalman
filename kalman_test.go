@@ -1,13 +1,17 @@
 package kalman_test
 
 import (
+	"encoding/csv"
+	"fmt"
 	"github.com/mtlotfizad/kalman"
 	"gonum.org/v1/plot"
 	"gonum.org/v1/plot/plotter"
 	"gonum.org/v1/plot/plotutil"
 	"gonum.org/v1/plot/vg"
+	"log"
 	"math"
 	"math/rand"
+	"os"
 	"testing"
 	"time"
 )
@@ -90,6 +94,27 @@ func TestKalmanGps_BatchProcess(t *testing.T) {
 
 	latitudeAryFiltered, longitudeAryFiltered := klm.BatchProcess(latAry, lngAry, accuracyAry, timeAry)
 
+	file, err := os.Create("/tmp/result.csv")
+	checkError("Cannot create file", err)
+	defer file.Close()
+
+	writer := csv.NewWriter(file)
+	defer writer.Flush()
+
+	for i := 0; i < len(timesString); i++ {
+		data := []string{fmt.Sprintf("%.6f", latAry[i]), fmt.Sprintf("%.6f", lngAry[i]),
+			fmt.Sprintf("%.6d", timeAry[i]), fmt.Sprintf("%.6f", latitudeAryFiltered[i]),
+			fmt.Sprintf("%.6f", longitudeAryFiltered[i])}
+		err := writer.Write(data)
+		checkError("Cannot write to file", err)
+	}
+
 	plotOriginFiltered(latAry, lngAry, latitudeAryFiltered, longitudeAryFiltered)
 
+}
+
+func checkError(message string, err error) {
+	if err != nil {
+		log.Fatal(message, err)
+	}
 }

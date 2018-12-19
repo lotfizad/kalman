@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cc288cda-7ddb-41c2-9099-1627922fa226" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kalman-gps.go" beforeDir="false" afterPath="$PROJECT_DIR$/kalman-gps.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kalman-ryskiwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/kalman-ryskiwt.go.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kalman_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/kalman_test.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kalman_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="93" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="227">
+              <caret line="107" selection-start-line="107" selection-end-line="107" />
               <folding>
                 <element signature="e#16#162#0" expanded="true" />
               </folding>
@@ -59,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/kalman-gps.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
-              <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
+              <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
               <folding>
                 <element signature="e#16#44#0" expanded="true" />
               </folding>
@@ -135,7 +133,7 @@
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545221461439" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545225884364" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
@@ -221,7 +219,7 @@
       <workItem from="1545035577907" duration="826000" />
       <workItem from="1545036875620" duration="127000" />
       <workItem from="1545037020752" duration="21550000" />
-      <workItem from="1545138783497" duration="14007000" />
+      <workItem from="1545138783497" duration="16765000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1545125818750</created>
@@ -244,19 +242,17 @@
       <option name="project" value="LOCAL" />
       <updated>1545216663190</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="`bad test` written for batchProcess">
+      <created>1545221484649</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1545221484649</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 25m 03s.xml">
-      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 25m 47s.xml">
-      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 37m 03s.xml">
-      <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestKalmanGps_Process_in_kalman_test_go - 2018.12.18 at 17h 37m 11s.xml">
       <configuration name="TestKalmanGps_Process in kalman_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -278,9 +274,18 @@
     <history-entry file="TestKalmanGps_BatchProcess_in_github_com_mtlotfizad_kalman - 2018.12.19 at 15h 40m 49s.xml">
       <configuration name="TestKalmanGps_BatchProcess in github.com/mtlotfizad/kalman" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestKalmanGps_BatchProcess_in_github_com_mtlotfizad_kalman - 2018.12.19 at 16h 29m 41s.xml">
+      <configuration name="TestKalmanGps_BatchProcess in github.com/mtlotfizad/kalman" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_BatchProcess_in_github_com_mtlotfizad_kalman - 2018.12.19 at 16h 31m 08s.xml">
+      <configuration name="TestKalmanGps_BatchProcess in github.com/mtlotfizad/kalman" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestKalmanGps_BatchProcess_in_github_com_mtlotfizad_kalman - 2018.12.19 at 16h 48m 17s.xml">
+      <configuration name="TestKalmanGps_BatchProcess in github.com/mtlotfizad/kalman" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36510000" />
+    <option name="totallyTimeSpent" value="39268000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -304,11 +309,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" weight="0.29913607" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3423326" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3423326" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297414" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5002767" side_tool="true" weight="0.3286638" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -345,16 +350,17 @@
     <MESSAGE value="change" />
     <MESSAGE value="Testing with sin(x) to estimate" />
     <MESSAGE value="add batch support to API" />
-    <option name="LAST_COMMIT_MESSAGE" value="add batch support to API" />
+    <MESSAGE value="`bad test` written for batchProcess" />
+    <option name="LAST_COMMIT_MESSAGE" value="`bad test` written for batchProcess" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/kalman_test.go</url>
-          <line>82</line>
+          <line>92</line>
           <properties />
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -458,7 +464,7 @@
     <entry file="file://$PROJECT_DIR$/kalman-gps.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
+          <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
           <folding>
             <element signature="e#16#44#0" expanded="true" />
           </folding>
@@ -467,8 +473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kalman_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="227">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
           <folding>
             <element signature="e#16#162#0" expanded="true" />
           </folding>
