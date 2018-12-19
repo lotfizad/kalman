@@ -7,7 +7,7 @@ import (
 const minAccuracy = 1
 
 type kalmanGps struct {
-	timeMilliSecond            uint
+	timeEpoch                  uint
 	latitude                   float64
 	longitude                  float64
 	variance                   float64
@@ -21,14 +21,14 @@ func New(averageSpeedMeterPerSecond float64) *kalmanGps {
 	return &kGps
 }
 
-func (gps *kalmanGps) InitState(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeMillisecond uint) {
-	gps.timeMilliSecond = timeMillisecond
+func (gps *kalmanGps) InitState(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeEpoch uint) {
+	gps.timeEpoch = timeEpoch
 	gps.latitude = latitudeMeasured
 	gps.longitude = longitudeMeasured
 	gps.variance = accuracyMeasured * accuracyMeasured
 }
 
-func (kalmanGps *kalmanGps) ProcessSinglePoint(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeMillisecond uint) {
+func (kalmanGps *kalmanGps) SinglePointProcess(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeEpoch uint) {
 	if accuracyMeasured < minAccuracy {
 		accuracyMeasured = minAccuracy
 	}
@@ -36,11 +36,11 @@ func (kalmanGps *kalmanGps) ProcessSinglePoint(latitudeMeasured, longitudeMeasur
 		panic(errors.New("InitState should be called first"))
 	}
 
-	timeMillisecondIncremental := timeMillisecond - kalmanGps.timeMilliSecond
-	if timeMillisecondIncremental > 0 {
-		kalmanGps.variance += float64(timeMillisecondIncremental) * kalmanGps.averageSpeedMeterPerSecond *
+	timeEpochIncremental := timeEpoch - kalmanGps.timeEpoch
+	if timeEpochIncremental > 0 {
+		kalmanGps.variance += float64(timeEpochIncremental) * kalmanGps.averageSpeedMeterPerSecond *
 			kalmanGps.averageSpeedMeterPerSecond / 1000.0
-		kalmanGps.timeMilliSecond = timeMillisecond
+		kalmanGps.timeEpoch = timeEpoch
 	}
 
 	var kalmanGain float64 = kalmanGps.variance / (kalmanGps.variance + accuracyMeasured*accuracyMeasured)
@@ -59,10 +59,12 @@ func (gps kalmanGps) GetLongitude() float64 {
 }
 
 func (kalmanGps *kalmanGps) BatchProcess(latitudeAry, longitudeAry, accuracyArray []float64,
-	timeMilliseconds []uint) (latitudeAryFiltered, longitudeAryFiltered []float64) {
+	timeEpochs []uint) (latitudeAryFiltered, longitudeAryFiltered []float64) {
+
+	kalmanGps.InitState(latitudeAry[0], longitudeAry[0], accuracyArray[0], timeEpochs[0])
 
 	inputPointsLength := len(latitudeAry)
-	if inputPointsLength != len(longitudeAry) || inputPointsLength != len(accuracyArray) || inputPointsLength != len(timeMilliseconds) {
+	if inputPointsLength != len(longitudeAry) || inputPointsLength != len(accuracyArray) || inputPointsLength != len(timeEpochs) {
 		panic(errors.New("Length of input arrays should be equal"))
 	}
 
@@ -71,7 +73,7 @@ func (kalmanGps *kalmanGps) BatchProcess(latitudeAry, longitudeAry, accuracyArra
 
 	for i := 1; i < inputPointsLength; i++ {
 
-		kalmanGps.ProcessSinglePoint(latitudeAry[i], longitudeAry[i], accuracyArray[1], uint(i))
+		kalmanGps.SinglePointProcess(latitudeAry[i], longitudeAry[i], accuracyArray[1], uint(i))
 		latitudeAryFiltered = append(latitudeAry, kalmanGps.GetLatitude())
 		longitudeAryFiltered = append(longitudeAry, kalmanGps.GetLongitude())
 	}
