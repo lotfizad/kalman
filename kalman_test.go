@@ -11,7 +11,7 @@ import (
 	"testing"
 )
 
-func generatePoints2(x []float64, y []float64) plotter.XYs {
+func generatePoints(x []float64, y []float64) plotter.XYs {
 	pts := make(plotter.XYs, len(x))
 
 	for i := range pts {
@@ -41,7 +41,7 @@ func TestKalmanGps_Process(t *testing.T) {
 		xary = append(xary, x)
 		yary = append(yary, y)
 
-		klm.Process(x, y, 1.0, uint(i))
+		klm.ProcessSinglePoint(x, y, 1.0, uint(i))
 		xaryFiltered = append(xaryFiltered, klm.GetLatitude())
 		yaryFiltered = append(yaryFiltered, klm.GetLongitude())
 	}
@@ -52,8 +52,8 @@ func TestKalmanGps_Process(t *testing.T) {
 	}
 
 	err = plotutil.AddLinePoints(p,
-		"Original", generatePoints2(xary, yary),
-		"Filtered", generatePoints2(xaryFiltered, yaryFiltered),
+		"Original", generatePoints(xary, yary),
+		"Filtered", generatePoints(xaryFiltered, yaryFiltered),
 	)
 	if err != nil {
 		panic(err)

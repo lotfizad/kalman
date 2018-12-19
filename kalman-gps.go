@@ -1,6 +1,8 @@
 package kalman
 
-import "errors"
+import (
+	"errors"
+)
 
 const minAccuracy = 1
 
@@ -26,7 +28,7 @@ func (gps *kalmanGps) InitState(latitudeMeasured, longitudeMeasured, accuracyMea
 	gps.variance = accuracyMeasured * accuracyMeasured
 }
 
-func (kalmanGps *kalmanGps) Process(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeMillisecond uint) {
+func (kalmanGps *kalmanGps) ProcessSinglePoint(latitudeMeasured, longitudeMeasured, accuracyMeasured float64, timeMillisecond uint) {
 	if accuracyMeasured < minAccuracy {
 		accuracyMeasured = minAccuracy
 	}
@@ -54,4 +56,25 @@ func (gps kalmanGps) GetLatitude() float64 {
 
 func (gps kalmanGps) GetLongitude() float64 {
 	return gps.longitude
+}
+
+func (kalmanGps *kalmanGps) BatchProcess(latitudeAry, longitudeAry, accuracyArray []float64,
+	timeMilliseconds []uint) (latitudeAryFiltered, longitudeAryFiltered []float64) {
+
+	inputPointsLength := len(latitudeAry)
+	if inputPointsLength != len(longitudeAry) || inputPointsLength != len(accuracyArray) || inputPointsLength != len(timeMilliseconds) {
+		panic(errors.New("Length of input arrays should be equal"))
+	}
+
+	latitudeAryFiltered = make([]float64, 0, inputPointsLength)
+	longitudeAryFiltered = make([]float64, 0, inputPointsLength)
+
+	for i := 1; i < inputPointsLength; i++ {
+
+		kalmanGps.ProcessSinglePoint(latitudeAry[i], longitudeAry[i], accuracyArray[1], uint(i))
+		latitudeAryFiltered = append(latitudeAry, kalmanGps.GetLatitude())
+		longitudeAryFiltered = append(longitudeAry, kalmanGps.GetLongitude())
+	}
+
+	return
 }
