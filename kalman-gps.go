@@ -71,11 +71,11 @@ func (kalmanGps *kalmanGps) BatchProcess(latitudeAry, longitudeAry, accuracyArra
 	latitudeAryFiltered = make([]float64, 0, inputPointsLength)
 	longitudeAryFiltered = make([]float64, 0, inputPointsLength)
 
-	for i := 1; i < inputPointsLength; i++ {
+	for i := 0; i < inputPointsLength; i++ {
 
-		kalmanGps.SinglePointProcess(latitudeAry[i], longitudeAry[i], accuracyArray[1], uint(i))
-		latitudeAryFiltered = append(latitudeAry, kalmanGps.GetLatitude())
-		longitudeAryFiltered = append(longitudeAry, kalmanGps.GetLongitude())
+		kalmanGps.SinglePointProcess(latitudeAry[i], longitudeAry[i], accuracyArray[1], timeEpochs[i])
+		latitudeAryFiltered = append(latitudeAryFiltered, kalmanGps.GetLatitude())
+		longitudeAryFiltered = append(longitudeAryFiltered, kalmanGps.GetLongitude())
 	}
 
 	return

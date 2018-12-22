@@ -90,7 +90,7 @@ func TestKalmanGps_BatchProcess(t *testing.T) {
 		timeAry[i] = uint(gpsTime.Unix())
 	}
 
-	klm := kalman.New(3.0)
+	klm := kalman.New(15.0)
 
 	latitudeAryFiltered, longitudeAryFiltered := klm.BatchProcess(latAry, lngAry, accuracyAry, timeAry)
 
